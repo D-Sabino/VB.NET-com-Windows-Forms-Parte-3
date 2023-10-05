@@ -73,10 +73,11 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Frm_Principal.vb">
+    <Compile Include="Classes\Funcionarios\Funcionario.vb" />
+    <Compile Include="Forms\Frm_Principal.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Principal.Designer.vb">
+    <Compile Include="Forms\Frm_Principal.Designer.vb">
       <DependentUpon>Frm_Principal.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
@@ -97,7 +98,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Frm_Principal.resx">
+    <EmbeddedResource Include="Forms\Frm_Principal.resx">
       <DependentUpon>Frm_Principal.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
