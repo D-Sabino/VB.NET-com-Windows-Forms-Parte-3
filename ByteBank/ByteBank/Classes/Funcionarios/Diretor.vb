@@ -1,10 +1,9 @@
 ﻿Namespace Classes.Funcionarios
     Public Class Diretor
+        Inherits Funcionario
 
 #Region "PROPRIEDADES"
-        Public Property nome As String
-        Public Property cpf As String
-        Public Property salario As Double
+
 #End Region
 
 #Region "CONSTRUTORES"
