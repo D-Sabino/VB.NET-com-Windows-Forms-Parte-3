@@ -11,7 +11,7 @@
 #End Region
 
 #Region "METODOS"
-        Public Function GetBonificacao() As Double
+        Public Overrides Function GetBonificacao() As Double
             Return salario * 0.1
 
         End Function

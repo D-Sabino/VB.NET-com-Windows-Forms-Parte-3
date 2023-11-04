@@ -12,6 +12,8 @@ Public Class Frm_Principal
         lbl_Principal.Text = "Principal"
 
         btm_Click.Text = "Clique aqui"
+        btm_TesteHeranca.Text = "Clique aqui para testar heranca"
+        btm_classebase.Text = "Executa exemplo classe MyBase"
     End Sub
 
     Private Sub Frm_Principal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -46,5 +48,29 @@ Public Class Frm_Principal
                " o valor calculado pela biblioteca foi de " + gerenciadorBonificacao.getBonificacao.ToString)
 
 
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btm_TesteHeranca.Click
+        Dim vDiretor As New Diretor()
+        Dim vFuncionario As New Funcionario()
+        Dim vDiretorFuncionario As New Funcionario()
+
+        vDiretor.salario = 10000
+        vFuncionario.salario = 10000
+
+        vDiretorFuncionario = vDiretor
+
+        Dim vSaida As String = ""
+
+        vSaida = "A bonificacao de vDiretor é " + vDiretor.GetBonificacao().ToString + vbCrLf
+        vSaida += "A bonificacao de vFuncionario é " + vFuncionario.GetBonificacao().ToString + vbCrLf
+        vSaida += "A bonificacao de vDiretorFuncionario é " + vDiretorFuncionario.GetBonificacao().ToString + vbCrLf
+    End Sub
+
+    Private Sub btm_classebase_Click(sender As Object, e As EventArgs) Handles btm_classebase.Click
+        Dim vDiretor As New Diretor()
+        vDiretor.salario = 10000
+
+        MsgBox("A bonificacao do diretor e: " + vDiretor.GetBonificacao().ToString)
     End Sub
 End Class

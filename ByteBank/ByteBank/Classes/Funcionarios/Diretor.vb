@@ -12,8 +12,9 @@
 #End Region
 
 #Region "METODOS"
-        Public Function GetBonificacao() As Double
-            Return salario * 1
+        'Overrides = Substitui
+        Public Overrides Function GetBonificacao() As Double
+            Return (salario * 1) + MyBase.GetBonificacao()
 
         End Function
 #End Region
