@@ -55,6 +55,8 @@ Public Class Frm_Principal
         Dim vFuncionario As New Funcionario()
         Dim vDiretorFuncionario As New Funcionario()
 
+        MsgBox("O numero de funcionarios atualmente instanciados são de " + Funcionario.TotalDeFuncionarios().ToString)
+
         vDiretor.salario = 10000
         vFuncionario.salario = 10000
 
